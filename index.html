@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>PRACTICA SASS II</title>
+</head>
+<body class="main__container">
+    <header class="sidebar__left">
+        <section class="sidebar__first">
+            <a class="sidebar__home" href="#">
+                <img class="sidebar__icons" src="img/home-icon.svg" alt="home icon">
+                <p class="sidebar__p">Inicio</p>
+            </a>
+            <a class="sidebar__search" href="#">
+                <img class="sidebar__icons" src="img/search-icon.svg" alt="search icon">
+                <p class="sidebar__p">Buscar</p>
+            </a>
+        </section>
+
+        <section class="sidebar__second">
+            <button class="sidebar__library">
+                <img class="sidebar__library__icons" src="img/library-icon.svg" alt="library icon">
+                <p class="sidebar__p">Tu biblioteca</p>
+            </button>
+            <article class="sidebar__add__next">
+                <button class="sidebar__add__btn" ><img class="sidebar__add__img" src="img/add-icon.svg" alt="add icon"></button>
+                <button class="sidebar__add__btn" ><img class="sidebar__add__img" src="img/right-arrow-icon.svg" alt="next icon"></button>
+            </article>
+        </section>
+
+        <section class="artist__filter">
+            <button class="artist__delete"><img class="artist__img" src="img/close-icon.svg" alt="cross icon"></button>
+            <button class="artist__option">Artista</button>
+        </section>
+
+        <section class="artist__search">
+            <button class="artist__search__btn">
+                <img class="artist__search__img" src="img/search-icon.svg" alt="search icon">
+            </button>
+            <button class="artist__search__order">
+                <p class="artist__search__p">Orden Alfabético</p>
+                <img class="artist__search__img" src="img/unordered-list-icon.svg" alt="order icon">
+            </button>
+        </section>
+
+        <section class="artists__list">
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/hardest-to-love-portada.jpeg" alt="artist img the weeknd">
+                    <p class="artists__list__name">The Weeknd</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/mojabi-ghost-portada.jpeg" alt="artist img tainy">
+                    <p class="artists__list__name">Tainy</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/oh-my-my-portada.jpeg" alt="artist img one republic">
+                    <p class="artists__list__name">One Republic</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/the-lazy-song-portada.jpeg" alt="artist img bruno mars">
+                    <p class="artists__list__name">Bruno Mars</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/un-verano-sin-ti-portada.jpeg" alt="artist img bad bunny">
+                    <p class="artists__list__name">Bad Bunny</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/san-lucas-portada.jpeg" alt="artist img kevin kaarl">
+                    <p class="artists__list__name">Kevin Kaarl</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/cheap-thrills-portada.jpeg" alt="artist img sia">
+                    <p class="artists__list__name">Sia</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+
+            <article class="artist__list__options">
+                <div class="artist__list__container">
+                    <img class="artist__list__img" src="img/artist-cover/sorry-portada.jpeg" alt="artist img justin bieber">
+                    <p class="artists__list__name">Justin Bieber</p>
+                </div>
+
+                <button class="artist__list__heart__btn">
+                    <img class="artist__list__heart__img" src="img/heart-solid-green-icon.svg" alt="heart icon">
+                </button>
+            </article>
+        </section>
+    </header>
+
+    <main class="main">
+        <section class="banner">
+            <article class="banner__topbar">
+                <div class="topar__btn">
+                    <button class="banner__left__right"><img class="banner__btn__img" src="img/arrow-left-s-line.svg" alt="arrow left icon"></button>
+                    <button class="banner__left__right"><img class="banner__btn__img" src="img/arrow-right-s-line.svg" alt="arrow right icon"></button>
+                </div>
+
+                <div class="topbar__user">
+                    <button class="topbar__download"><img class="topbar__download__img" src="img/download-icon-white.svg" alt="download icon">Instalar app</button>
+                    <button class="topbar__bell"><img class="topbar__bell__img" src="img/bell-icon-white.svg" alt="bell icon"></button>
+                    <button class="topbar__user"><img class="topbar__user__img" src="img/user-icon-example-2.jpg" alt="user icon"></button>
+                </div>
+            </article>
+
+            <article class="artist__presentation">
+                <div class="artist__verified">
+                    <img class="artists__verified__img" src="img/verified-logo.svg" alt="verified logo">
+                    <p class="artist__verified__p">Artista Verificado</p>
+                </div>
+
+                <div class="artist__name">
+                    <h1 class="aritist__name__h1">The Weeknd</h1>
+                </div>
+
+                <div class="artist__listeners">
+                    <p class="artist__listeners__count">113,250,749 oyentes mensuales</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="popular">
+            <article class="popular__play">
+                <button class="popular__pause"><img class="pause__img" src="img/pause-green-icon-v2.svg" alt="pause icon"></button>
+                <button class="popular__following"><p class="popular__following__P">Siguiendo</p></button>
+                <button class="popular__more"><img class="more__img" src="img/more-icon.svg" alt="more icon"></button>
+            </article>
+
+            <article class="popular__title">
+                <h2 class="popular__title__h2">Populares</h2>
+            </article>
+
+            <article class="playlist">
+                <article class="next__song">
+                    <div class="next__song__name">
+                        <img class="next__song__rhythm" src="img/rhythm-fill-icon.svg" alt="rhythm icon">
+                        <img class="next__song__cover" src="img/artist-cover/blinding-lightsa-cover.jpeg" alt="song cover blinding lights">
+                        <a class="next__song__a" href="#">Blinding Lights</a>
+                    </div>
+
+                    <div class="next__song__listeners">
+                        <p class="next__song__listeners__p"> <span class="next__song__listeners__1">4.702.754.087</span></p>
+                    </div>
+
+                    <div class="next__song__duration">
+                        <p class="next__song__duration__p">3:20</p>
+                    </div>
+                </article>
+
+                <article class="next__song">
+                    <div class="next__song__name">
+                        <p class="next__song__number">2</p>
+                        <img class="next__song__cover" src="img/artist-cover/get-lucky-portada.jpeg" alt="song cover get lucky">
+                        <a class="next__song__a" href="#">Get Lucky</a>
+                    </div>
+
+                    <div class="next__song__listeners">
+                        <p class="next__song__listeners__p"><span class="next__song__listeners__2">2.689.867.757</span></p>
+                    </div>
+
+                    <div class="next__song__duration">
+                        <p class="next__song__duration__p">4:08</p>
+                    </div>
+                </article>
+
+                <article class="next__song">
+                    <div class="next__song__name">
+                        <p class="next__song__number">3</p>
+                        <img class="next__song__cover" src="img/artist-cover/rich-love-portada.jpeg" alt="song cover rich love">
+                        <a class="next__song__a" href="#">Rich Love</a>
+                    </div>
+
+                    <div class="next__song__listeners">
+                        <p class="next__song__listeners__p"><span class="next__song__listeners__3">798.754.087</span></p>
+                    </div>
+
+                    <div class="next__song__duration">
+                        <p class="next__song__duration__p">3:21</p>
+                    </div>
+                </article>
+
+                <article class="next__song">
+                    <div class="next__song__name">
+                        <p class="next__song__number">4</p>
+                        <img class="next__song__cover" src="img/artist-cover/shape-of-you-portada.jpeg" alt="song cover shape of you">
+                        <a class="next__song__a" href="#">Shape of You</a>
+                    </div>
+
+                    <div class="next__song__listeners">
+                        <p class="next__song__listeners__p"><span class="next__song__listeners__4">2.234.567.168</span></p>
+                    </div>
+
+                    <div class="next__song__duration">
+                        <p class="next__song__duration__p">3:57</p>
+                    </div>
+                </article>
+
+                <article class="next__song">
+                    <div class="next__song__name">
+                        <p class="next__song__number">5</p>
+                        <img class="next__song__cover" src="img/artist-cover/sex-on-fire-portada.jpeg" alt="song cover sex on fire">
+                        <a class="next__song__a" href="#">Sex on Fire</a>
+                    </div>
+
+                    <div class="next__song__listeners">
+                        <p class="next__song__listeners__p"><span class="next__song__listeners__5">22.436.034</span></p>
+                    </div>
+
+                    <div class="next__song__duration">
+                        <p class="next__song__duration__p">3:23</p>
+                    </div>
+                </article>
+
+                
+            </article>
+        </section>
+    </main>
+
+    <header class="sidebar__right">
+        <section class="artist__album">
+            <article class="artist__album__name">
+                <div class="artist__album__title">
+                    <a class="artist__album__a" href="#">The Weeknd</a>
+                </div>
+
+                <div class="artist__album__close">
+                    <button class="artist__album__close__btn"><img class="artist__album__close__img" src="img/close-icon.svg" alt="close icon"></button>
+                </div>
+            </article>
+
+            <article class="artist__album__cover">
+                <img class="artist__album__cover__img" src="img/artist-cover/blinding-lightsa-cover.jpeg" alt="song cover">
+            </article>
+        </section>
+
+        <section class="about">
+            <article class="about__top">
+                <div class="about__name">
+                    <a class="about__song" href="#">Blinding Lights<span class="about__artist"><br>The Weeknd</span></a>
+                </div>
+
+                <div class="about__icons">
+                    <button class="about__heart"><img class="about__heart__img" src="img/heart-icon.svg" alt="heart icon"></button>
+                    <button class="about__more"><img class="about__more__img" src="img/more-icon.svg" alt="more icon"></button>
+                </div>
+            </article>
+        </section>
+
+        <section class="about__info">
+            <article class="about__info__banner">
+                <p class="about__info__banner__p">Información sobre el artista</p>
+            </article>
+
+            <article class="about__info__top">
+                <div class="about__info__top__container">
+                    <a class="about__info__top__p" href="#">The Weeknd</p></a>
+                    <button class="about__info__top__btn"><p class="about__info__top__btn__p">Dejar de seguir</p></button>
+                </div>
+            </article>
+
+            <article class="about__info__text">
+                <p class="about__info__text__p">The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum 3X GRAMMY...</p>
+            </article>
+        </section>
+    </header>
+
+    <footer class="footer">
+        <article class="current__song">
+            <img class="current__song_img" src="img/artist-cover/blinding-lightsa-cover.jpeg" alt="song cover">
+            <div class="current__song__a__container">
+                <a class="current__song__name" href="#">Blinding Lights<span class="current__song__span"><br>The Weeknd</span></a>
+            </div>
+            <button class="current__song_btn"><img class="current__song_icon" src="img/heart-solid-green-icon.svg" alt="heart icon"></button>
+        </article>
+
+        <article class="player">
+            <div class="player_btns">
+                <button class="player__shuffle"><img class="player__shuffle__img" src="img/shuffle-icon.svg" alt="shuffle"></button>
+                <button class="player__skip"><img class="player__skip__img" src="img/skip-back-icon.svg" alt="skip back"></button>
+                <button class="player__pause"><img class="player__pause__img" src="img/pause-white-icon-v2.svg" alt="puse"></button>
+                <button class="player__skip"><img class="player__skip__img" src="img/skip-forward-icon.svg" alt="skip forward"></button>
+                <button class="player__repeat"><img class="player__repeat__img" src="img/repeat-icon.svg" alt="repeat"></button>
+            </div>
+
+            <div class="player__bar">
+                <p class="player__timer">1:29</p>
+                <hr class="player__timer__line">
+                <p class="player__timer">3:31</p>
+            </div>
+        </article>
+
+        <article class="player__media">
+            <button class="player__media__btn"><img class="player__media__img" src="img/speaker-icon-green.svg" alt="speaker"></button>
+            <button class="player__media__btn"><img class="player__media__img" src="img/mic-icon.svg" alt="mic"></button>
+            <button class="player__media__btn"><img class="player__media__img" src="img/menu-icon.svg" alt="list"></button>
+            <button class="player__media__btn"><img class="player__media__img" src="img/bluetooth-icon.svg" alt="conected"></button>
+            <button class="player__media__btn"><img class="player__media__img" src="img/volume-up-icon.svg" alt="volume"></button>
+            <hr class="player__media__line">
+            <button class="player__media__btn"><img class="player__media__img" src="img/picture-in-picture-icon.svg" alt="picture in picture"></button>
+            <button class="player__media__btn"><img class="player__media__img" src="img/fullscreen-icon.svg" alt="full screen"></button>
+        </article>
+        
+    </footer>
+</body>
+</html>
