@@ -1,0 +1,445 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: $fontSizeText;
+    min-height: 100vh;
+    padding: 0;
+
+    img {
+        width: 20px;
+    }
+}
+
+.main__container {
+    display: grid;
+    gap: 0;
+    grid-template: 
+    "left center right" 100%
+    "footer footer footer" 5%/
+    25% 50% 25%
+    ; 
+
+    @include nanoTablets {
+        display: grid;
+        gap: 0;
+        grid-template: 
+        "left center" 100%
+        "footer footer" 5%/
+        25% 75% 
+        ;  
+    }
+
+    @include phones {
+        display: grid;
+        gap: 0;
+        grid-template: 
+        "center" 100%
+        "footer" 5%/
+        100% 
+        ; 
+    }
+
+    .sidebar__left {
+        grid-area: left;
+        background-color: $mainBackgroundColor;
+        padding: 1rem; 
+        @include phones {
+            display: none;
+        }
+    }
+
+    .main {
+        grid-area: center;
+        background-color: $mainBackgroundColor;
+        padding: 10px 0 70px 0;
+        transition: .8s;
+
+        @include nanoTablets {
+            padding:  10px 10px 70px 0;
+            transition: 1s;
+        }
+
+        @include phones {
+            padding:  10px 16px 70px 16px;
+            transition: 1s;
+        }
+    }
+
+    .sidebar__right {
+        grid-area: right;
+        background-color: $mainBackgroundColor;
+        padding: 1rem; 
+
+        @include nanoTablets {
+            display: none;
+        }
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: $mainBackgroundColor;
+        padding: 0 1rem;
+        padding-bottom: 24px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @include phones {
+            padding: 0rem;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.artist__list__options {
+    @include sidebarFirstFlexAling;
+    @include sidebarLeftPadding;
+    justify-content: space-between;
+    margin: 11px 10px;
+    padding: 5px;
+    transition: .2s;
+    cursor: pointer;
+
+    .artist__list__heart__img {
+        opacity: 0;
+        background-color: #242424;
+    }
+
+    &:hover {
+        background-color: #242424;
+        border-radius: 10px;
+
+        .artist__list__heart__img {
+            opacity: 1;
+            transition: all ease 0.4s;
+        }
+    }
+
+    @include miniTablets {
+        margin: 23px 10px;
+    }
+
+    .artist__list__container {
+        @include sidebarFirstFlexAling;
+
+        .artist__list__img {
+            width: 60px;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: .2s;
+
+            @include miniTablets {
+                width: 50px;
+            }
+        }
+    
+        .artists__list__name {
+            color: $textColorSongs;
+            margin-left: 16px;
+            cursor: pointer;
+            transition: .2s;
+
+            @include miniTablets {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.artist__list__heart__btn {
+    @include sidebarSecondButtonsLayout;
+    @include sidebarFirstFlexAling;
+    transition: .2s;
+
+    &:hover {
+        @include hoverZoomOut;
+    }
+
+    @include miniTablets {
+        width: 15px;
+    }
+}
+
+.topbar__user {
+    @include sidebarFirstFlexAling;
+    gap: 10px;
+
+    .topbar__bell,
+    .topbar__user {
+        @include secondaryButtons;
+        padding: 4px;
+        background: linear-gradient(rgba(5, 7, 12, 0.628), rgba(5, 7, 12, 0.628));
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        .topbar__bell__img {
+            width: 29px;
+            padding: 4px;
+        }
+
+        .topbar__user__img {
+            width: 29px;
+            border-radius: 100%;
+        }
+    }
+
+    .topbar__download {
+        @include largeButtons;
+        background: linear-gradient(rgba(5, 7, 12, 0.628), rgba(5, 7, 12, 0.628));
+        color: #fff;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+    }
+}
+
+.popular__play {
+    @include sidebarFirstFlexAling;
+    gap: 25px;
+
+    .popular__pause {
+        @include secondaryButtons;
+        background-color: transparent;
+        padding: 0;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        .pause__img {
+            width: 60px;
+        }
+    }
+}
+
+.popular__following {
+    @include largeButtons;
+    padding: 8px 12px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+
+    &:hover {
+        @include hoverZoomOut;
+        border-color: $TextColorWhite;
+    }
+
+    .popular__following__P {
+        color: $TextColorWhite;
+    }
+}
+
+.popular__more {
+    @include largeButtons;
+    padding: 0px;
+    background-color: transparent;
+
+    &:hover {
+        @include hoverZoomOut;
+        border-color: $TextColorWhite;
+    }
+    
+    .more__img {
+        width: 40px;
+    }
+}
+
+.artist__album__close__btn {
+    @include sidebarRightButtons;
+
+    &:hover {
+        background-color: #242424;
+        transition: all ease .4s;
+        @include hoverZoomOut;
+    }
+
+    .artist__album__close__img {
+        width: 25px;
+    }
+}
+
+.about__icons {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+    
+    .about__heart,
+    .about__more {
+        @include sidebarRightButtons;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        .about__heart__img,
+        .about__more__img {
+            width: 25px;
+            transition: .2s;
+
+            @include laptops {
+                width: 20px;
+                transition: .2s;
+            }
+        }
+    }
+}
+
+.about__info__top__btn {
+    @include largeButtons;
+    margin: 20px 20px;
+    padding: 7px 12px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    transition: .2s;
+
+    &:hover {
+        @include hoverZoomOut;
+        border-color: $TextColorWhite;
+    }
+
+    .about__info__top__btn__p {
+        color: $TextColorWhite;
+    }
+
+    @include laptops {
+        padding: 4px 6px;
+        font-size: 0.55rem;
+        transition: .2s;
+    }
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.current__song_btn {
+    @include sidebarRightButtons;
+    justify-content: center;
+    margin: 0 12px 15px 12px;
+    transition: .2s;
+
+    &:hover {
+        @include hoverZoomOut;
+    }
+
+    @include pocketPhones {
+        margin: 10px 5px;
+        transition: .2s;
+    }
+    
+    .current__song_icon {
+        width:  20px;
+        transition: .2s;
+
+        @include phones {
+            width: 20px;
+            transition: .2s;
+            margin-top: 10px;
+        }
+
+        @include pocketPhones {
+            width: 25px;
+            transition: .2s;
+        }
+    }
+}
+
+.player_btns {
+    @include sidebarFirstFlexAling;
+    justify-content: center;
+    gap: 0.5vw;
+
+    .player__shuffle,
+    .player__skip,
+    .player__repeat {
+        @include sidebarRightButtons;
+        justify-content: center;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        .player__shuffle__img,
+        .player__skip__img,
+        .player__repeat__img {
+            width: 25px;
+            transition: .2s;
+
+            &:hover {
+                @include hoverZoomOut;
+            }
+
+            @include phones {
+                width: 15px;
+                transition: .2s;
+            }
+        }
+    }
+
+    .player__pause {
+        @include sidebarRightButtons;
+        justify-content: center;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        .player__pause__img {
+            width: 35px;
+            transition: .2s;
+
+            @include phones {
+                width: 30px;
+                transition: .2s;
+            }
+        }
+    }
+}
+
+.player__media {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+    margin-right: 16px;
+
+    @include largePhones {
+        display: none;
+    }
+
+    .player__media__btn {
+        @include sidebarRightButtons;
+        justify-content: center;
+        transition: .2s;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        @include phones {
+            padding: 0.05rem;
+            transition: .2s;
+        }
+
+        .player__media__img {
+            width: 20px;
+            transition: .2s;
+
+            &:hover {
+                @include hoverZoomOut;
+            }
+
+            @include phones {
+                width: 15px;
+                transition: .2s;
+            }
+        }
+    }
+}
