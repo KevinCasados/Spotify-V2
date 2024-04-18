@@ -1,0 +1,128 @@
+$textColor: #c4c2c2;
+$textColorSongs: #eee4e4;
+$mainBackgroundColor: #121212;
+$TextColorWhite: #fff;
+$fontFamily: "rubik",Verdana,Tahoma, sans-serif;
+$fontSizeText: 1rem;
+$fontWeightText: 500;
+$letterSpacing: 0.03rem;
+$textDecoration: none;
+
+
+@mixin sidebarLeftFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin sidebarFirstFlexAling {
+    display: flex;
+    align-items: center;
+}
+
+@mixin sidebarLeftPadding {
+    gap: 1rem;
+    padding: 1rem 0rem;
+    text-decoration: none;
+    margin: auto 1rem;
+}
+
+@mixin sidebarSecondButtonsLayout {
+    background-color: $mainBackgroundColor;
+    color: $textColor;
+    font-family: $fontFamily;
+    font-weight: $fontWeightText;
+    font-size: $fontSizeText;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin artistOptionButton {
+    padding: 8px 15px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    color: #060606;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@mixin secondaryButtons {
+    @include sidebarSecondButtonsLayout;
+    @include sidebarFirstFlexAling;
+    padding: 0.313rem;
+    background-color: #2e2e2e;
+    border-radius: 100%;
+}
+
+@mixin artistsPresentationText {
+    padding: 10px;
+    font-weight: 400;
+    font-size: $fontSizeText;
+    color: $textColorSongs;
+    letter-spacing: 0.03rem;
+}
+
+@mixin largeButtons {
+    @include secondaryButtons;
+    @include sidebarFirstFlexAling;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+}
+
+@mixin sidebarRightButtons {
+    @include secondaryButtons; 
+    background-color: transparent;
+}
+
+@mixin textColorSongsPreset {
+    color: $textColorSongs;
+    letter-spacing: $letterSpacing;
+    text-decoration: $textDecoration;
+}
+
+@mixin textColorPreset {
+    color: $textColor;
+    letter-spacing: $letterSpacing;
+}
+
+@mixin laptops {
+    @media screen and (max-width: 93.313rem) {@content};
+}
+
+@mixin tablets {
+    @media screen and (max-width: 81.875rem) {@content};
+}
+
+@mixin miniTablets {
+    @media screen and (max-width: 76.125rem) {@content};
+}
+
+@mixin nanoTablets {
+    @media screen and (max-width: 67.5rem) {@content};
+}
+
+
+@mixin phones {
+    @media screen and (max-width: 63.813rem) {@content};
+}
+
+@mixin pocketPhones {
+    @media screen and (max-width: 43rem) {@content};
+}
+
+@mixin largePhones {
+    @media screen and (max-width: 32.063rem) {@content};
+}
+
+@mixin hoverButtons {
+    color: $TextColorWhite;
+    transition: all ease .4s;
+}
+
+@mixin hoverZoomOut {
+    transform: scale(1.1);
+    transition: .2s;
+}

@@ -1,0 +1,635 @@
+.sidebar__first {
+    @include sidebarLeftFlex;
+
+    .sidebar__home, 
+    .sidebar__search {
+        @include sidebarFirstFlexAling;
+        @include sidebarLeftPadding;
+    }   
+
+    .sidebar__icons {
+        @include sidebarFirstFlexAling;
+        width: 30px; 
+        transition: .2s;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+        
+        @include miniTablets {
+            width: 25px;
+        }
+    }
+    
+    .sidebar__p {
+        @include sidebarFirstFlexAling;
+        @include textColorPreset;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            @include hoverButtons;
+        }
+
+        @include miniTablets {
+            font-size: .8rem;
+        }
+    }
+}
+
+.sidebar__second {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+
+    .sidebar__library,
+    .sidebar__add__next {
+        @include sidebarFirstFlexAling;
+        @include sidebarLeftPadding;
+        @include sidebarSecondButtonsLayout;
+        margin-top: 1rem;
+
+        &:hover {
+            @include hoverButtons;
+        }
+
+        @include miniTablets {
+            font-size: .8rem;
+        }
+
+        @include nanoTablets {
+            font-size: .7rem;
+        }
+    }  
+
+    .sidebar__add__btn {
+        @include sidebarSecondButtonsLayout;
+    }
+
+    .sidebar__library__icons {
+        width: 30px;
+        transition: .2s;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        @include miniTablets {
+            width: 25px;
+            transition: .2s;
+        }
+
+        @include nanoTablets {
+            width: 20px;
+            transition: .2s;
+        }
+    }
+
+    .sidebar__add__img {
+        width: 22px;
+        transition: .2s;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        @include miniTablets {
+            width: 17px
+        }
+    }
+}
+
+.artist__filter {
+    @include sidebarFirstFlexAling;
+    @include sidebarLeftPadding;
+
+    .artist__delete {
+        @include secondaryButtons;
+
+        &:hover {
+            background-color: #424141;
+            transition: all ease .4s;
+            @include hoverZoomOut;
+        }
+
+        .artist__img {
+            width: 22px;
+            transition: .2s;
+
+            @include miniTablets {
+                width: 17px;
+            }
+        }
+    }
+}
+
+.artist__option {
+    @include sidebarSecondButtonsLayout;
+    @include sidebarFirstFlexAling;
+    @include artistOptionButton;
+    transition: .2s;
+
+    &:hover {
+        background-color: #e2e2e2;
+        transition: all ease .4s;
+        @include hoverZoomOut;
+    }
+
+    @include miniTablets {
+        font-size: 0.65rem;
+    }
+}
+
+.artist__search {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+
+    .artist__search__order,
+    .artist__search__icon,
+    .artist__search__btn {
+        @include sidebarFirstFlexAling;
+        @include sidebarLeftPadding;
+        @include sidebarSecondButtonsLayout;
+        font-weight: 300;
+        transition: .2s;
+
+        &:hover {
+            @include hoverButtons;
+        }
+
+        @include miniTablets {
+            font-size: .75rem;
+        }
+    }
+
+    .artist__search__img {
+        width: 25px;
+        transition: .2s;
+
+        &:hover {
+            @include hoverZoomOut;
+        }
+
+        @include miniTablets {
+            width: 20px;
+        }
+    }
+}
+
+.banner {
+    @include sidebarLeftFlex;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(5, 7, 12, 0), rgba(5, 7, 12, 0.5)), url("../img/artist-cover/TheWeeknd-main-cover-v2.jpg");
+    background-position-y: 36%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 40%;
+
+    .banner__topbar {
+        @include sidebarFirstFlexAling;
+        justify-content: space-between;
+        padding: 20px 25px;
+    }
+
+    .topar__btn {
+        @include sidebarFirstFlexAling;
+        gap: 10px;
+
+        .banner__left__right {
+            @include secondaryButtons;
+            padding: 0;
+
+            &:hover {
+                background-color: #343434;
+                transition: all ease .4s;
+            }
+
+            .banner__btn__img {
+                width: 35px;
+            }
+        }
+    }
+}
+
+.artist__presentation {
+    @include sidebarLeftFlex;
+    padding: 68px 25px;
+
+    .artist__verified {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0;
+
+        .artist__verified__p {
+            @include artistsPresentationText;
+            transition: .2s;
+
+            @include miniTablets {
+                font-size: .8rem;
+                transition: .2s;
+            }
+        }
+
+        .artists__verified__img {
+            width: 30px ;
+            transition: .2s;
+
+            @include miniTablets {
+                width: 25px;
+                transition: .2s;
+            }
+        }
+    }
+}
+
+.artist__name {
+    @include textColorSongsPreset;
+    padding: 5px 0;
+    font-weight: 400 ;
+    font-size: 4rem;
+    transition: .2s;
+
+    @include miniTablets {
+        font-size: 3rem;
+        transition: .2s;
+    }
+
+    @include largePhones {
+        font-size: 2.5rem;
+        transition: .2s;
+    }
+}
+
+.artist__listeners__count {
+    @include artistsPresentationText;
+    font-size: 1.1rem;
+    transition: .2s;
+
+    @include miniTablets {
+        font-size: .9rem;
+        transition: .2s;
+    }
+}
+
+.popular {
+    @include sidebarLeftFlex;
+    background: linear-gradient(rgba(76, 102, 131, 0.628), rgba(5, 7, 12, 0.628), rgba(5, 7, 12, 0.628));
+    padding: 25px;
+}
+
+.popular__title {
+    @include sidebarLeftFlex;
+    @include artistsPresentationText;
+    padding: 25px 0;
+
+    .popular__title__h2{
+        font-weight: 500;
+        color: $TextColorWhite;
+    }
+}
+
+.playlist {
+    @include sidebarLeftFlex;
+    gap: 0;
+    
+    .next__song {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 18px 10px;
+
+        &:hover {
+            background-color: #242424;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all ease .4s;
+        }
+    }
+
+    .next__song__name {
+        @include sidebarFirstFlexAling;
+        gap: 20px;
+
+        .next__song__number {
+            @include textColorPreset;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 0 6px 0 6px;
+        }
+
+        .next__song__cover {
+            width: 50px;
+            border-radius: 5px;
+        }
+
+        .next__song__rhythm {
+            width: 24px;
+        }
+
+        .next__song__a {
+            @include textColorSongsPreset;
+            
+            &:hover {
+                @include hoverButtons;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.next__song__listeners,
+.next__song__duration {
+    @include sidebarFirstFlexAling;
+
+    .next__song__listeners__p,
+    .next__song__duration__p {
+        @include textColorPreset;
+    }
+
+    .next__song__listeners__1 {
+        padding-right: 44px;
+    }
+
+    .next__song__listeners__4 {
+        padding-right: 32px;
+    }
+}
+
+.next__song__listeners__p {
+    @include largePhones {
+        display: none;
+    }
+}
+
+.sidebar__right {
+    @include sidebarLeftFlex;
+    justify-content: flex-start;
+
+    .artist__album {
+        padding: 10px 0;
+
+        .artist__album__name {
+            @include sidebarFirstFlexAling;
+            justify-content: space-between;
+            padding: 10px 16px;
+
+            .artist__album__a {
+                @include textColorSongsPreset;
+                font-size: 1.20rem;
+                font-weight: 500;
+
+                &:hover {
+                    @include hoverButtons;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.artist__album__cover {
+    @include sidebarFirstFlexAling;
+    justify-content: center;
+    padding: 0 16px;
+
+    .artist__album__cover__img {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+.about {
+    padding: 10px 0;
+
+    .about__top {
+        @include sidebarFirstFlexAling;
+        justify-content: space-between;
+        padding: 10px 16px;
+
+        .about__song {
+            text-decoration: none;
+            color: $TextColorWhite;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.03rem;
+            line-height: 1rem;
+            transition: .2s;
+
+            &:hover {
+                text-decoration: underline;
+                
+                .about__artist {
+                    color: $TextColorWhite;
+                }
+            }
+
+            @include laptops {
+                font-size: 1.3rem;
+                transition: .2s;
+            }
+
+            @include miniTablets {
+                font-size: 1rem;
+                transition: .2s;
+            }
+
+            .about__artist{
+                @include textColorPreset;
+                font-size: 1rem;
+                font-weight: 400;
+                transition: .2s;
+
+                @include laptops {
+                    font-size: 0.8rem;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}
+
+.about__info {
+    @include sidebarLeftFlex;
+    justify-content: space-between;
+    
+    .about__info__banner {
+        @include sidebarLeftFlex;
+        justify-content: space-between;
+        background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0),), url("../img/artist-cover/TheWeeknd-main-cover-v5.jpg");
+        background-position-y: 10%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 0px 16px;
+    }
+
+    .about__info__banner__p {
+        @include textColorSongsPreset;
+        display: flex;
+        margin: 10px 0 170px 0;
+        padding: 5px 20px;
+        font-size: 1.20rem;
+        font-weight: 500;
+        transition: .2s;
+
+        @include laptops {
+            font-size: 0.8rem;
+            transition: .2s;
+        }
+
+        @include miniTablets {
+            font-size: 0.6rem;
+            transition: .2s;
+        }
+    }
+}
+
+.about__info__top__container {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+    margin: 0 16px 0 16px;
+    background-color: #242424;
+
+    .about__info__top__p {
+        @include textColorSongsPreset;
+        display: flex;
+        margin: 20px 0 20px 0;
+        padding: 5px 20px;
+        font-size: 1rem;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.about__info__text {
+    @include sidebarFirstFlexAling;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 16px 16px 16px;
+    padding: 0 20px 20px 20px;
+    background-color: #242424;
+
+    .about__info__text__p {
+        @include textColorPreset;
+        font-weight: 300;
+        font-size: 1.10rem;
+        transition: .2s;
+
+        @include laptops {
+            font-size: 0.8rem;
+            transition: .2s;
+        }
+
+        @include tablets {
+            font-size: 0.8rem;
+            transition: 0.2s;
+        }
+    }
+}
+
+.footer {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+    transition: .2s;
+    
+    @include largePhones {
+        justify-content: center;
+        transition: .2s;
+    }
+    
+    .current__song {
+        display: flex;
+        align-items: center;
+
+        @include largePhones {
+            display: none;
+        }
+
+        .current__song_img {
+            width: 50px;
+            margin: 0 20px;
+            border-radius: 5px;
+            transition: .2s;
+            cursor: pointer;
+
+            @include phones {
+                width: 30px;
+                transition: .2s;
+            }
+
+            @include pocketPhones {
+                width: 38px;
+                margin: 13px 0 0 20px;   
+            }
+        }    
+
+        .current__song__name {
+            @include textColorSongsPreset;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: .2s;
+
+            &:hover {
+                text-decoration: underline;
+                
+                .current__song__span {
+                    color: $TextColorWhite;
+                }
+            }
+
+            @include phones {
+                font-size: .7rem;
+                font-weight: 400;
+                transition: .2s;
+            }
+
+            @include pocketPhones {
+                display: none;
+            }
+
+            .current__song__span {
+                @include textColorPreset;
+                font-size: 0.80rem;
+                transition: .2s;
+
+                @include phones {
+                    font-size: .55rem;
+                    font-weight: 400;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}
+
+
+.player__bar {
+    @include sidebarFirstFlexAling;
+    justify-content: space-between;
+
+    .player__timer {
+        @include textColorPreset;
+        margin: 0 10px;
+        transition: .2s;
+
+        @include phones {
+            font-size: .7rem;
+        }
+    }
+
+    .player__timer__line {
+        width: 30vw;
+    }
+}
+
+.player__media__line {
+    width: 4vw;
+    margin: 5px;
+}
